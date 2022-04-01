@@ -6,13 +6,15 @@ function App() {
 
   function changeTheme(){
     if(theme === 'light'){
-      setTheme('dark')
+      setTheme('luxury')
     }else{
       setTheme('light')
     }
   }
-
-444444444444---------------------------------------------------------------------------------------
+  
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+  }, [theme])
 
 
   return (
